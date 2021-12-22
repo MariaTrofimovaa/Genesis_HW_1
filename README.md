@@ -1,1 +1,2 @@
-# Genesis_HW_1
+# TikTuk_testTask
+Genesis Front-End School test task 
