@@ -35,28 +35,23 @@ const TrendingListItem = ({
           <p className={styles.text}>{text}</p>
           <div className={styles.userInfoCard}>
             <div className={styles.userInfo}>
-              {avatar ? (
-                <img src={avatar} alt="User Avatar" className={styles.avatar} />
-              ) : (
+              {avatar && (
                 <img
-                  src={defaultAvatar}
-                  alt="User Avatar"
+                  src={avatar || defaultAvatar}
+                  atl="User Avatar"
                   className={styles.avatar}
                 />
               )}
-
               <Link to={`/profile/${name}`}>
                 <p className={styles.userName}>{nickName}</p>
               </Link>
             </div>
-
             <div className={styles.tags}>
               {hashTags &&
                 hashTags.map((tag) => (
                   <p key={shortid.generate()}>#{tag.name}</p>
                 ))}
             </div>
-
             <p className={styles.comments}>
               <span className={styles.commentsTitle}>Comments: </span>
               {comments}

@@ -11,18 +11,18 @@ const TrendingFeedList = () => {
   return (
     <>
       <ul className={styles.trendingList}>
-        {trendings.map((item) => (
+        {trendings.map(({ id, videoUrl, authorMeta }) => (
           <TrendingListItem
             id
-            key={item.id}
-            video={item.videoUrl}
-            text={item.text}
-            avatar={item.authorMeta.avatar}
-            name={item.authorMeta.name}
-            nickName={item.authorMeta.nickName}
-            hashTags={item.hashtags}
-            comments={item.commentCount}
-            likes={item.authorMeta.heart}
+            key={id}
+            video={videoUrl}
+            text={text}
+            avatar={authorMeta.avatar}
+            name={authorMeta.name}
+            nickName={authorMeta.nickName}
+            hashTags={hashtags}
+            comments={commentCount}
+            likes={authorMeta.heart}
           />
         ))}
       </ul>

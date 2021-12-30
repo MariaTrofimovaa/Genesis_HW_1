@@ -25,7 +25,6 @@ export const getUserInfo = (uniqueId) => {
   return instance
     .get(`user/info/${uniqueId}`)
     .then((res) => {
-      
       return res.data;
     })
     .catch((error) => {
@@ -33,19 +32,13 @@ export const getUserInfo = (uniqueId) => {
     });
 };
 
-
 export const getUserFeed = (uniqueId) => {
-  return (
-    instance
-      .get(`/user/feed/${uniqueId}`)
-      .then((res) => {
-        return res.data;
-      })
-      .catch((error) => {
-        throw error;
-      })
-  );
+  return instance
+    .get(`/user/feed/${uniqueId}`)
+    .then((res) => {
+      return res.data;
+    })
+    .catch((error) => {
+      throw error;
+    });
 };
-
-
-

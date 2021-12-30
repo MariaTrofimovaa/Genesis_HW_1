@@ -3,8 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import Profile from "../../components/profile/Profile";
 
-import { getUserFeedOperation, getUserInfoOperation } from "../../redux/user/user.operations";
-import { getUserFeedSelector, getUserInfoSelector } from "../../redux/user/user.selectors";
+import {
+  getUserFeedOperation,
+  getUserInfoOperation,
+} from "../../redux/user/user.operations";
+import {
+  getUserFeedSelector,
+  getUserInfoSelector,
+} from "../../redux/user/user.selectors";
 
 const ProfilePage = () => {
   const { uniqueId } = useParams();

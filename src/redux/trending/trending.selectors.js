@@ -1,5 +1,5 @@
 const getTrendingSelector = (state) => {
-    return state.trending;
+  return state.trending;
 };
 
 export { getTrendingSelector };
